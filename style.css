@@ -1,0 +1,308 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: black;
+  font-family: "Noto Serif TC", serif;
+  font-weight: 400;
+  background-color: #ffefd5;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 64px;
+  padding-top: 32px;
+}
+
+header {
+  height: calc(100vh - 80px);
+  position: relative;
+  background-image: url(./hero\ img.jpg);
+  background-size: cover;
+  color: white;
+  font-weight: 200px;
+}
+
+#header-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* background-color: aqua; */
+}
+.header-container-inner {
+  width: 50%;
+}
+
+.logo-label {
+  color: white;
+  font-family: "Mrs Saint Delafield", cursive;
+  font-size: 52px;
+  line-height: 80px;
+  padding: 0 100px;
+}
+
+.logo-label-text {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*NAVIGATION*/
+
+nav {
+  height: 80px;
+  width: 100%;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+.main-nav-list {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+  padding-right: 10px;
+}
+
+.nav-link:link,
+.nav-link:visited {
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s;
+  display: inline-block;
+}
+.nav-link:hover,
+.nav-link:active {
+  color: #c0c0c0;
+}
+
+.sign-in-btn:link,
+.sign-in-btn:visited {
+  /* font-family: "Archivo Narrow", sans-serif; */
+  font-weight: 600px;
+  background-color: #dd9d4c;
+  color: white;
+  text-decoration: none;
+  /* display: inline-block; */
+  padding: 12px 24px;
+  border-radius: 3px;
+}
+
+.sign-in-btn:hover,
+.sign-in-btn:active {
+  color: #fdc77b;
+}
+
+.checkbtn {
+  font-size: 30px;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  label.logo-label {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .checkbtn {
+    display: block;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #557c93;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  a:hover,
+  a:active {
+    background: none;
+    color: #dd9d4c;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+h1 {
+  font-size: 52px;
+  font-weight: 700;
+  font-family: "Noto Serif Display", serif;
+  font-style: italic;
+  letter-spacing: 2px;
+  font-weight: 900px;
+  margin-bottom: 32px;
+}
+h2 {
+  margin-top: 30px;
+  font-weight: 600px;
+}
+p {
+  font-size: 20px;
+  font-weight: 200px;
+  line-height: 1.6;
+  margin-bottom: 48px;
+}
+
+.btn:link,
+.btn:visited {
+  font-size: 20px;
+  font-weight: 600px;
+  background-color: #dd9d4c;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  padding: 16px 32px;
+  border-radius: 9px;
+}
+
+.btn:hover,
+.btn:active {
+  color: #fdc77b;
+}
+h2 {
+  font-size: 44px;
+  margin-bottom: 48px;
+}
+
+.grid {
+  display: grid;
+  gap: 9.6rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+.step-img {
+  width: 70%;
+  height: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .step-text-box {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+}
+
+/*FEATURES*/
+
+.grid2 {
+  display: grid;
+  gap: 25px;
+  align-items: center;
+  justify-items: auto;
+}
+.grid3 {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+  background-color: #557c93;
+  align-items: center;
+}
+
+.grid-2-cols {
+  grid-template-columns: 60px, 1fr;
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media only screen and (max-width: 768px) {
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .furniture-boxes {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+}
+
+.text-box {
+  padding: 32px;
+}
+
+@media only screen and (max-width: 768px) {
+  .furni-img img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.furni-img {
+  padding-bottom: 15px;
+}
+
+/*FOOTER*/
+
+.email {
+  text-decoration: none;
+  color: #c0c0c0;
+}
+
+.phone {
+  text-decoration: none;
+  color: #c0c0c0;
+}
+
+footer.p {
+  font-weight: 200;
+  font-size: 2px;
+}
+
+.feature-section1 {
+  padding-bottom: 64px;
+}
+
+.feature-section2 {
+  padding-bottom: 64px;
+}
+
+.furni-title {
+  font-size: large;
+  padding-bottom: 5px;
+}
+.logo-label-foot {
+  color: white;
+  font-family: "Mrs Saint Delafield", cursive;
+  font-size: 52px;
+}
